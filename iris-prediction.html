@@ -16,68 +16,78 @@
       </div>
       <div class="col-5 mt-3">
         <h2 class="text-center">Ciri-ciri:</h2>
-        <div class="form-group row">
-          <label for="panjangSepal" class="col-4 col-form-label ml-auto">Panjang Sepal</label>
-          <div class="col-4 mr-auto">
-            <div class="input-group">
-              <input type="number" class="form-control" id="panjangPetal" value="0">
-              <div class="input-group-append">
-                <div class="input-group-text">cm</div>
+        <form action="/submit" method="post">
+          <div class="form-group row">
+            <label for="panjangSepal" class="col-4 col-form-label ml-auto">Panjang Sepal</label>
+            <div class="col-4 mr-auto">
+              <div class="input-group">
+                <input type="number" class="form-control" name="panjangSepal" value="{{ data[0] if data else 0 }}" step=0.1>
+                <div class="input-group-append">
+                  <div class="input-group-text">cm</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="lebarSepal" class="col-4 col-form-label ml-auto">Lebar Sepal</label>
-          <div class="col-4 mr-auto">
-            <div class="input-group">
-              <input type="number" class="form-control" id="panjangPetal" value="0">
-              <div class="input-group-append">
-                <div class="input-group-text">cm</div>
+          <div class="form-group row">
+            <label for="lebarSepal" class="col-4 col-form-label ml-auto">Lebar Sepal</label>
+            <div class="col-4 mr-auto">
+              <div class="input-group">
+                <input type="number" class="form-control" name="lebarSepal" value="{{ data[1] if data else 0 }}" step=0.1>
+                <div class="input-group-append">
+                  <div class="input-group-text">cm</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="panjangPetal" class="col-4 col-form-label ml-auto">Panjang Petal</label>
-          <div class="col-4 mr-auto">
-            <div class="input-group">
-              <input type="number" class="form-control" id="panjangPetal" value="0">
-              <div class="input-group-append">
-                <div class="input-group-text">cm</div>
+          <div class="form-group row">
+            <label for="panjangPetal" class="col-4 col-form-label ml-auto">Panjang Petal</label>
+            <div class="col-4 mr-auto">
+              <div class="input-group">
+                <input type="number" class="form-control" name="panjangPetal" value="{{ data[2] if data else 0 }}" step=0.1>
+                <div class="input-group-append">
+                  <div class="input-group-text">cm</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="form-group row">
-          <label for="lebarPetal" class="col-4 col-form-label ml-auto">Lebar Petal</label>
-          <div class="col-4 mr-auto">
-            <div class="input-group">
-              <input type="number" class="form-control" id="panjangPetal" value="0">
-              <div class="input-group-append">
-                <div class="input-group-text">cm</div>
+          <div class="form-group row">
+            <label for="lebarPetal" class="col-4 col-form-label ml-auto">Lebar Petal</label>
+            <div class="col-4 mr-auto">
+              <div class="input-group">
+                <input type="number" class="form-control" name="lebarPetal" value="{{ data[3] if data else 0 }}" step=0.1>
+                <div class="input-group-append">
+                  <div class="input-group-text">cm</div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="form-group">
-          <div class="col-5 mx-auto">
-            <input type="submit" class="form-control btn-primary" value="Submit">
+          <div class="form-group">
+            <div class="col-5 mx-auto">
+              <input type="submit" class="form-control btn-primary" value="Submit">
+            </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
-    <!-- <div id="result" class="mb-5 d-none"> -->
+    {% if result==1 and show %}
     <div id="result" class="mb-5">
       <hr>
       <div class="text-center alert-success p-3">
         <h3>Hasil:</h3>
         <h2>Iris Versicolor</h2>
         <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Blue_Flag%2C_Ottawa.jpg" alt="iris-versicolor" height="250px">
-        <!-- <h2>Iris Setosa</h2>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" alt="iris-setosa" height="250px"> -->
       </div>
     </div>
+    {% elif result==0 and show %}
+    <div id="result" class="mb-5">
+      <hr>
+      <div class="text-center alert-success p-3">
+        <h3>Hasil:</h3>
+        <h2>Iris Setosa</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" alt="iris-setosa" height="250px">
+      </div>
+    </div>
+    {% endif %}
   </div>
   <footer class="text-center footer fixed-bottom mb-3">
     &copy Moh Achun Armando | 140810170020
