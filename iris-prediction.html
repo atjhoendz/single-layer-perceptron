@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iris Classification</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container mt-5 align-items-center">
+    <div class="row justify-content-center">
+      <div class="text-center col-12">
+        <h1>Iris Classification</h1>
+        <p>Mengetahui Jenis Bunga Iris (Iris Setosa/Iris Versicolor) Berdasarkan Ukuran Sepal dan Petalnya. <br> Menggunakan Single Layer Perceptron.</p>
+      </div>
+      <div class="col-5 mt-3">
+        <h2 class="text-center">Ciri-ciri:</h2>
+        <div class="form-group row">
+          <label for="panjangSepal" class="col-4 col-form-label ml-auto">Panjang Sepal</label>
+          <div class="col-4 mr-auto">
+            <div class="input-group">
+              <input type="number" class="form-control" id="panjangPetal" value="0">
+              <div class="input-group-append">
+                <div class="input-group-text">cm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lebarSepal" class="col-4 col-form-label ml-auto">Lebar Sepal</label>
+          <div class="col-4 mr-auto">
+            <div class="input-group">
+              <input type="number" class="form-control" id="panjangPetal" value="0">
+              <div class="input-group-append">
+                <div class="input-group-text">cm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="panjangPetal" class="col-4 col-form-label ml-auto">Panjang Petal</label>
+          <div class="col-4 mr-auto">
+            <div class="input-group">
+              <input type="number" class="form-control" id="panjangPetal" value="0">
+              <div class="input-group-append">
+                <div class="input-group-text">cm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="lebarPetal" class="col-4 col-form-label ml-auto">Lebar Petal</label>
+          <div class="col-4 mr-auto">
+            <div class="input-group">
+              <input type="number" class="form-control" id="panjangPetal" value="0">
+              <div class="input-group-append">
+                <div class="input-group-text">cm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-5 mx-auto">
+            <input type="submit" class="form-control btn-primary" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="result" class="mb-5 d-none"> -->
+    <div id="result" class="mb-5">
+      <hr>
+      <div class="text-center alert-success p-3">
+        <h3>Hasil:</h3>
+        <h2>Iris Versicolor</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/Blue_Flag%2C_Ottawa.jpg" alt="iris-versicolor" height="250px">
+        <!-- <h2>Iris Setosa</h2>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/56/Kosaciec_szczecinkowaty_Iris_setosa.jpg" alt="iris-setosa" height="250px"> -->
+      </div>
+    </div>
+  </div>
+  <footer class="text-center footer fixed-bottom mb-3">
+    &copy Moh Achun Armando | 140810170020
+  </footer>
+</body>
+</html>
