@@ -20,7 +20,7 @@
             <label for="panjangSepal" class="col-4 col-form-label ml-auto">Panjang Sepal</label>
             <div class="col-4 mr-auto">
               <div class="input-group">
-                <input type="number" class="form-control" name="panjangSepal" value="{{ data[0] if data else 0 }}" step=0.1>
+                <input type="number" class="form-control" name="panjangSepal" value="{{ data[0] if data else 0 }}" step=0.1 required>
                 <div class="input-group-append">
                   <div class="input-group-text">cm</div>
                 </div>
@@ -31,7 +31,7 @@
             <label for="lebarSepal" class="col-4 col-form-label ml-auto">Lebar Sepal</label>
             <div class="col-4 mr-auto">
               <div class="input-group">
-                <input type="number" class="form-control" name="lebarSepal" value="{{ data[1] if data else 0 }}" step=0.1>
+                <input type="number" class="form-control" name="lebarSepal" value="{{ data[1] if data else 0 }}" step=0.1 required>
                 <div class="input-group-append">
                   <div class="input-group-text">cm</div>
                 </div>
@@ -42,7 +42,7 @@
             <label for="panjangPetal" class="col-4 col-form-label ml-auto">Panjang Petal</label>
             <div class="col-4 mr-auto">
               <div class="input-group">
-                <input type="number" class="form-control" name="panjangPetal" value="{{ data[2] if data else 0 }}" step=0.1>
+                <input type="number" class="form-control" name="panjangPetal" value="{{ data[2] if data else 0 }}" step=0.1 required>
                 <div class="input-group-append">
                   <div class="input-group-text">cm</div>
                 </div>
@@ -53,7 +53,7 @@
             <label for="lebarPetal" class="col-4 col-form-label ml-auto">Lebar Petal</label>
             <div class="col-4 mr-auto">
               <div class="input-group">
-                <input type="number" class="form-control" name="lebarPetal" value="{{ data[3] if data else 0 }}" step=0.1>
+                <input type="number" class="form-control" name="lebarPetal" value="{{ data[3] if data else 0 }}" step=0.1 required>
                 <div class="input-group-append">
                   <div class="input-group-text">cm</div>
                 </div>
